@@ -1,31 +1,44 @@
 import React from 'react'
-import express from '../../public/express.png';
-import java from '../../public/java.png'
-import mongodb from '../../public/mongodb.jpg'
-import node from '../../public/node.png'
-import reactjs from '../../public/reactjs.png';
+import chatBotCoffee from '../../public/chatBotCoffee.png';
+import ecommerce from '../../public/ecommerce.png'
+import wordToPDF from '../../public/wordToPDF.png'
+import expenseTracker from '../../public/expenseTracker.png'
+import portfolio from '../../public/portfolio.jpg';
 //name="Portfolio"
 const Portfolio = () => {
     const cardItems = [
         {id: 1,
-            logo:mongodb,
-            name:"MongoDB"
+            logo:wordToPDF,
+            name:"Word-to-PDF Converter",
+            desc : "Software to convert word docx file to PDF format using Nodejs, React, Tailwindcss, Express.",
+            srcCode: "https://github.com/aaryall/mern-pdf-converter",
+            videoLink : "https://uploadnow.io/files/L7M3hQk"
         },
         {id: 2,
-            logo:express,
-            name:"Express"
+            logo:chatBotCoffee,
+            name:"Chat-bot",
+            desc : "Built a React-based chatbot integrated with Gemini 1.5 Flash, featuring real-time messaging, smooth UI transitions, and a toggleable chat interface. Enhanced with a custom coffee shop dataset for tailored responses.",
+            srcCode:"https://github.com/aaryall/node-chat-app/tree/master",
+            videoLink:"https://www.linkedin.com/posts/aryanportfolio_react-chatbot-ai-activity-7305814806467358720-KJcm?utm_source=share&utm_medium=member_desktop&rcm=ACoAACl6sY4BeYNqDLfhJ0mWw78JLZcR6Rq75Zg"
         },
         {id: 3,
-            logo:reactjs,
-            name:"Reactjs"
+            logo:portfolio,
+            name:"My portfolio",
+            desc : "Created a responsive portfolio website using React, Tailwind CSS and various other react libraries. Showcased all projects with smooth navigation and integrated a contact form for users to send messages directly.",
+            srcCode:"https://github.com/aaryall/myportfolio",
+            videoLink:"",
         },
         {id: 4,
-            logo:node,
-            name:"Nodejs"
+            logo:expenseTracker,
+            name:"Expense Tracker",
+            desc : "Built a simple expense tracker in React with features like expense form, info display, transaction list—designed to strengthen core React concepts."
         },
         {id: 5,
-            logo:java,
-            name:"Java"
+            logo:ecommerce,
+            name:"E-commerce APIs",
+            desc : "Designed and built the backend for an e-commerce platform using Node.js, Express, and MongoDB with Mongoose for real-time data handling. Implemented secure product management via JWT-based authorization and CORS policies. Added features like product ratings, filtering, and indexing for optimized performance. APIs were thoroughly tested with Postman and deployed on platforms like Docker",
+            srcCode:"https://github.com/aaryall/e-commerce-apis/tree/master",
+            videoLink:""
         }
     ]
   return (
@@ -35,16 +48,16 @@ const Portfolio = () => {
             <span className='underline font-semibold'>Feature Project</span>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-3 my-5'>
                 {
-                    cardItems.map(({id,logo,name})=>(
+                    cardItems.map(({id,logo,name,desc,srcCode,videoLink})=>(
                         <div className='md:w-[300px] md:h-[300px] border-gray-200 border-[2px] rounded shadow-lg p-1 cursor-pointer hover:scale-110 duration-300' key={id}>
-                            <img src={logo} className='w-[120px] h-[120px] border-gray-200 p-1 rounded-full border-[2px]'/>
+                            <img src={logo} className='w-[300px] h-[200px]  p-3  rounded-3xl '/>
                             <div>
                                 <div className=' px-2 font-bold text-xl mb-2'>{name}</div>
-                                <p className='px-2 text-gray-700'>The tool is easy to use. All you need to do is choose the number of words </p>
+                                <p className='px-2 text-gray-700'>{desc}</p>
                             </div>
                             <div className='px-6 py-4 space-x-4 '>
-                                <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded cursor-pointer'>Video</button>
-                                <button className='bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded cursor-pointer' >sorce code</button>
+                             {videoLink?<button className='bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded cursor-pointer'><a href={videoLink} target='_blank'>Video</a></button> : ""}   
+                                <button className='bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded cursor-pointer' ><a href={srcCode} target='_blank'>Source code</a></button>
                             </div>
                         </div>
                     ))

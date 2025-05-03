@@ -12,29 +12,42 @@ const About = () => {
 
           <br/>
           <h1 className='text-green-600 font-semibold text-xl'>Education & Training</h1>
-          <p className='text-justify'>GALGOTIA COLLEGE OF ENGINEERING &
+          <p className='text-justify mt-1'>GALGOTIA COLLEGE OF ENGINEERING &
     TECHNOLOGY 
-    Bachelor's of Technology CSE - 8.01 CGPA
-    Intermediate - 87.1%
-    High school - 10 CGPA</p>
+    <ul className='list-disc list-inside'>
+      <li>Bachelor's of Technology CSE - <span className='ml-6 md:ml-0'>8.01 CGPA</span></li>
+      <li>Intermediate - 87.1%</li>
+      <li>High school - 10 CGPA</li>
+    </ul>
+    </p>
 
     <br/>
     <br/>
     <h1 className='text-green-600 font-semibold text-xl'>Skill & Expertise</h1>
-          <p className='text-justify' >  Proficient in Java and Javascript(ES6) Experienced with React, Node.js, SQL Strong grasp of Docker, MongoDB, Tailwind CSS </p>
+          <p className='text-justify mt-1' >  Proficient in Java and Javascript(ES6) Experienced with React, Node.js, SQL Strong grasp of Docker, MongoDB, Tailwind CSS </p>
 
     <br/>
     <br/>
 
           <h1 className='text-green-600 font-semibold text-xl'>Professional Experience</h1>
-          <p className='text-justify'>Software Engineer Analyst at Accenture, I contributed to the development, which led to a 15% increase in user engagement. I actively participated in debugging and optimizing existing applications, resulting in a 10% enhancement in overall system performance. 
-            As part of weekly coding sprints, 
-            I consistently met deadlines and helped boost team productivity by 5%. I also utilized RESTful API techniques to streamline front-end to back-end communication, improving data consistency by 50%. Additionally, I assisted in front-end debugging tasks for the main web application, which increased site uptime by 25%. My efforts in refactoring code and eliminating bugs further enhanced the application's performance by 15%.</p>
+          
+          <h1 className='font-semibold mt-5 mb-2'>Software Engineer Analyst </h1>
+          <p className='text-justify mt-1'>
+            <ul className='list-disc list-inside'>
+              
+                <li>Created and maintained RESTful APIs, supporting a user base of 100,000+ and
+                contributing to a 15% growth in traffic.</li>
+                <li>Increased application performance by 20% through the effective implementation of
+                caching strategies and database indexing.</li>
+                <li>Engaged in weekly coding sprints, consistently meeting deadlines, and contributing
+                to a 5% overall increase in team productivity.</li>
+            </ul>
+          </p>
 
     <br/>
     <br/>
     <h1 className='text-green-600 font-semibold text-xl'>Achivement and Awards</h1>
-          <p className='text-justify'>I was awarded Accenture’s FY 2023 Pinnacle Award and the Celebrate Excellence Award for outstanding performance. Additionally, I ranked Ace Coder #1 five times at Coding Ninjas, reflecting my strong coding and problem-solving skills.</p>
+          <p className='text-justify mt-1'>I was awarded Accenture’s FY 2023 Pinnacle Award and the Celebrate Excellence Award for outstanding performance. Additionally, I ranked Ace Coder #1 five times at Coding Ninjas, reflecting my strong coding and problem-solving skills.</p>
 
     <br/>
       </div>

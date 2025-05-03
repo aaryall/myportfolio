@@ -7,7 +7,7 @@ import { SiExpress } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { IoLogoNodejs } from "react-icons/io5";
 import { ReactTyped,Typed } from "react-typed";
-import pic from "../../public/photo.avif"
+import mypic from "../../public/mypic.png"
 const Home = () => {
   return (
     <>
@@ -19,18 +19,16 @@ const Home = () => {
                     <h1>Hello I'm a </h1>
                     {/* <span className='text-red-700 font-bold'>Developer</span> */}
                     <ReactTyped
-          strings={["Developer","Programmar","Coder"]}
+          strings={["Developer", "Programmar" , "Coder"]}
           typeSpeed={40}
           backSpeed={50}
-          loop={true}
-        />
+          loop={true} />
                     </div>
                     <br/>
                     <p className='text-sm md:text-md text-justify'>
-                    Software Engineer with 2 years of experience as a Backend Developer at Accenture.
-                    Proficient in designing and implementing scalable backend solutions using the MERN
-                    stack. Skilled in building robust APIs and integrating front-end and back-end systems.
-                    Currently seeking opportunities to expand expertise in full stack development.
+                    Hi, I'm a Backend Developer with more than 2 years of experience building scalable web applications using the MERN stack.
+                    I specialize in creating robust APIs and seamless backend systems that power modern web apps.
+                    I'm currently expanding my skillset into full stack development.
                     </p>
                     <br/>
                 {/*Social Media icons */}
@@ -65,14 +63,15 @@ const Home = () => {
                     </div>
                     
                 </div>
+                {/*jfif*/}
                 <div className='md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1'>
-                    <img src={pic} className='rounded-full w-[450] h-[450]' alt=''/>
+                    <img src={mypic} className='rounded-full w-auto h-auto' alt=''/>
                 </div>
             </div>
 
             
         </div>
-        <hr/>
+        <hr className='mx-auto w-auto'/>
     </>
   )
 }
