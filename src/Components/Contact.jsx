@@ -33,7 +33,7 @@ const Contact = () => {
         <div name="Contact" className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16'>
             
                 <h1 className="text-3xl font-bold mb-5">Contact me</h1>
-                <span>Please fill out form below to contact me</span>
+                <span>Please fill out form below to contact me.</span>
             
             <div className='flex flex-col items-center mt-6'>
                 <form  onSubmit={handleSubmit(onSubmit)} method="POST" className='bg-slate-200 w-auto md:w-96 px-8 py-6 rounded-xl'>

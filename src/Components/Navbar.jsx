@@ -1,9 +1,19 @@
 import React, { useState } from 'react'
-import pic from "../../public/photo.avif"
+import pic from "../../public/mypic.png"
 import { LuMenu } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
 import {Link} from 'react-scroll';
 const Navbar = () => {
+    const onButtonClick = () => {
+        const pdfUrl = "AryanResume.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = "AryanResume.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     const [menu, setMenu] = useState(false);
     const navItems = [
        { id:1,
@@ -35,6 +45,7 @@ const Navbar = () => {
                         <Link to={text} smooth={true} duration={500} offset={-70} activeClass = "active">{text}</Link>
                     </li>
                    ))}
+                   <button onClick={onButtonClick} className='bg-black w-40 text-white rounded-xl px-3 py-2 hover:bg-slate-700 shadow-md p-1 cursor-pointer hover:scale-110'>Download CV</button>
                     </ul>
                     <div className='md:hidden' onClick={()=>setMenu(!menu)}>{menu?<RxCross2 size={24}/>:<LuMenu size={24}/>}</div>
                     
@@ -50,6 +61,9 @@ const Navbar = () => {
                     <li className='hover:scale-105 duration-200 font-semibold cursor-pointer' key ={id}>                       
                      <Link onClick={()=> setMenu(!menu)} to={text} smooth={true} duration={500} offset={-70} activeClass = "active">{text}</Link></li>
                    ))}
+
+                <button onClick={onButtonClick} className='bg-black w-50 text-white rounded-xl px-3 py-2 hover:bg-slate-700 shadow-md p-1 cursor-pointer hover:scale-110'>Download CV</button>
+
             </ul>
           )}
           </div>
